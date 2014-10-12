@@ -1,0 +1,339 @@
+/* Typography */
+*, *:focus, *:active {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  font-family: 'Raleway', helvetica, arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: #341F1F;
+  background: #fff;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+}
+  @media (max-width: 767px){
+    body {
+      font-size: 20px;
+    }
+  }
+
+::-moz-selection { background: #F2A5A5; }
+::selection { background: #F2A5A5; }
+
+h1, h2, h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  font-size: 110px;
+}
+
+h2 {
+  font-size: 80px;
+}
+  @media (max-width: 767px){
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+p {
+  margin: 24px 0;
+}
+
+html, body, section {
+  height: 100%;
+}
+
+a {
+  color: #DF1D1D;
+  text-decoration: none;
+}
+  a:hover {
+    color: #F2A5A5;
+  }
+
+/* Preloader */
+.pre-loader {
+  z-index: 1000;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  cursor: default;
+  pointer-events: none;
+  color: #fff;
+  background-color: #DF1D1D;
+  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+  background:    -moz-linear-gradient(#DF1D1D, #CF6969);
+  background:     -ms-linear-gradient(#DF1D1D, #CF6969);
+  background:      -o-linear-gradient(#DF1D1D, #CF6969);
+  background:         linear-gradient(#DF1D1D, #CF6969);
+}
+  .spinner {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+    .spinner path, .spinner rect{
+      fill: #F2A5A5;
+    }
+
+body.is-loading {
+  overflow: hidden;
+}
+  body.is-loaded {
+    overflow: auto;
+  }
+
+/* Structure */
+nav {
+  width: 20px;
+  position: fixed;
+  top: 10vh;
+  right: 4vw;
+  z-index: 900;
+}
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+    nav li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+      nav li a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        text-indent: -9999em;
+        border-radius: 100%;
+        border: 2px solid #F2A5A5;
+        margin-bottom: 6px;
+        transition: all 0.5s ease-out;
+      }
+        nav li a.current, nav li a:hover {
+          background: #F2A5A5;
+        }
+
+section {
+  text-align: center;
+  position: relative;
+  background: #fff;
+  z-index: 800;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10vh 6vw;
+}
+  section.current .content {
+    position: fixed;
+  }
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  21% {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  41% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+a.more {
+  display: block;
+  width: 160px;
+  height: 75px;
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  margin-left: -80px;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #F2A5A5 !important;
+}
+  a.more:hover {
+    color: #F2A5A5 !important;
+  }
+  a.more i.icon-arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px;
+    color: #F2A5A5;
+    font-size: 60px;
+    -webkit-animation: fadeOutDown 3000ms ease-out infinite;
+    -webkit-animation-delay: 2s;
+  }
+
+a.button {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  background: #F2A5A5;
+  color: #D64C4C !important;
+  border-radius: 40px;
+  font-weight: 700;
+  border: 2px solid #F2A5A5;
+  vertical-align: middle;
+  transition: all 0.5s ease-out;
+}
+  a.button:hover {
+    background: transparent;
+    color: #F2A5A5 !important;
+  }
+  a.button i {
+    font-size: 40px;
+    position: relative;
+    top: 6px;
+    vertical-align: middle;
+  }
+
+#section-home, #section-work {
+  background: #fff;
+}
+
+#section-about, #section-skills {
+  color: #fff;
+  background: #DF1D1D;
+  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+  background:    -moz-linear-gradient(#DF1D1D, #CF6969);
+  background:     -ms-linear-gradient(#DF1D1D, #CF6969);
+  background:      -o-linear-gradient(#DF1D1D, #CF6969);
+  background:         linear-gradient(#DF1D1D, #CF6969);
+}
+  #section-about a, #section-skills a {
+    color: #fff;
+  }
+    #section-about a:hover, #section-skills a:hover {
+      color: #F2A5A5;
+    }
+
+/* Home Section */
+#section-home .logo {
+  margin: 0 auto 20px auto;
+  width: 12vw;
+}
+  #section-home .logo i.icon-bolt {
+    font-size: 100px;
+    color: #DF1D1D;
+  }
+#section-home h1 {
+  line-height: 8vw;
+  font-size: 9vw;
+  color: #DF1D1D;
+  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  #section-home h1 small {
+    font-size: 5vw;
+    line-height: 6vw;
+    font-weight: 100;
+    display: block;
+    text-transform: none;
+  }
+
+/* About Section */
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 6px solid #F2A5A5;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+/* Work Section */
+.work-links {
+  padding: 72px 0;
+}
+a.work-link {
+  display: inline-block;
+  vertical-align: top;
+  color: #341F1F;
+  width: 30%;
+  text-align: left;
+  transition: all 0.5s ease-out;
+}
+  a.work-link:hover {
+    color: #DF1D1D;
+    background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-6px);
+  }
+  a.work-link i {
+    font-size: 100px;
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  a.work-link h4 {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  a.work-link h4 small {
+    display: block;
+    font-weight: 100;
+    font-size: 22px;
+    text-transform: none;
+  }
+
+/* Contact section */
+.contact-links {
+  padding: 72px 0;
+}
+.contact-link {
+  font-size: 160px;
+  color: #341F1F;
+  margin: 48px;
+  transition: all 0.5s ease-out;
+  display: inline-block;
+}
+  .contact-link:hover {
+    color: #DF1D1D;
+    background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+  }
