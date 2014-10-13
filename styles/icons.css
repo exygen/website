@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "exygen";
-  src:url("fonts/exygen.eot");
+  src:url("../fonts/exygen.eot");
   src:url("fonts/exygen.eot?#iefix") format("embedded-opentype"),
-    url("fonts/exygen.woff") format("woff"),
-    url("fonts/exygen.ttf") format("truetype"),
-    url("fonts/exygen.svg#exygen") format("svg");
+    url("../fonts/exygen.woff") format("woff"),
+    url("../fonts/exygen.ttf") format("truetype"),
+    url("../fonts/exygen.svg#exygen") format("svg");
   font-weight: normal;
   font-style: normal;
 
