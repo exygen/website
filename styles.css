@@ -194,25 +194,18 @@ section {
 /* More Arrow
 -----------------------------------------*/
 @-webkit-keyframes fadeOutDown {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-    transform: translate3d(0, 6px, 0);
-  }
-  21% {
-    opacity: 0;
-    transform: translate3d(0, -10px, 0);
-  }
-  41% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+  0% {opacity: 1;}
+  20% {opacity: 0;-webkit-transform: translate3d(0, 6px, 0);transform: translate3d(0, 6px, 0);}
+  21% {opacity: 0;-webkit-transform: translate3d(0, -10px, 0);transform: translate3d(0, -10px, 0);}
+  41% {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+  100% {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+}
+@keyframes fadeOutDown {
+  0% {opacity: 1;}
+  20% {opacity: 0;-webkit-transform: translate3d(0, 6px, 0);transform: translate3d(0, 6px, 0);}
+  21% {opacity: 0;-webkit-transform: translate3d(0, -10px, 0);transform: translate3d(0, -10px, 0);}
+  41% {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+  100% {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
 }
 a.more {
   display: block;
@@ -248,7 +241,6 @@ a.more {
 -----------------------------------------*/
 .logo {
   margin: 0 auto 20px auto;
-  /*width: 12vw;*/
 }
   .logo i.icon-bolt {
     font-size: 100px;
@@ -258,10 +250,14 @@ h1.welcome-heading {
   font-size: 2.6rem;
   line-height: 2.4rem;
   color: #DF1D1D;
-  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
+  h1.welcome-heading em {
+    display: block;
+    font-style: normal;
+    background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   h1.welcome-heading small {
     font-size: 1.8rem;
     line-height: 1.8rem;
@@ -304,6 +300,7 @@ a.work-link {
     background: -webkit-linear-gradient(#DF1D1D, #CF6969);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
   }
   a.work-link i {
@@ -338,8 +335,6 @@ a.work-link {
     a.work-link i {
       float: left;
       margin-right: 12px;
-    }
-    a.work-link h4 {
     }
   }
 
@@ -403,5 +398,6 @@ a.resume-button {
     background: -webkit-linear-gradient(#DF1D1D, #CF6969);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
