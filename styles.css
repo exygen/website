@@ -1,4 +1,5 @@
-/* Typography */
+/* Base
+-----------------------------------------*/
 *, *:focus, *:active {
   outline: none;
   -webkit-user-select: none;
@@ -6,24 +7,44 @@
       -ms-user-select: none;
           user-select: none;
 }
+::-moz-selection { background: #F2A5A5; }
+::selection { background: #F2A5A5; }
 
-body {
+
+/* Typography
+-----------------------------------------*/
+html, body {
   font-family: 'Raleway', helvetica, arial, sans-serif;
-  font-size: 40px;
   text-align: center;
   color: #341F1F;
   background: #fff;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
-  @media (max-width: 767px){
-    body {
-      font-size: 20px;
+  @media (min-width: 568px) {
+    html, body {
+      font-size: 26px;
     }
   }
 
-::-moz-selection { background: #F2A5A5; }
-::selection { background: #F2A5A5; }
+  @media (min-width: 768px) {
+    html, body {
+      font-size: 26px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    html, body {
+      font-size: 32px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    html, body {
+      font-size: 40px;
+    }
+  }
 
 h1, h2, h3 {
   font-weight: 900;
@@ -32,24 +53,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 110px;
+  font-size: 2.6rem;
 }
 
 h2 {
-  font-size: 80px;
+  font-size: 1.8rem;
 }
-  @media (max-width: 767px){
-    h2 {
-      font-size: 40px;
-    }
-  }
 
 p {
   margin: 24px 0;
-}
-
-html, body, section {
-  height: 100%;
 }
 
 a {
@@ -60,7 +72,9 @@ a {
     color: #F2A5A5;
   }
 
-/* Preloader */
+
+/* Preloader
+-----------------------------------------*/
 .pre-loader {
   z-index: 1000;
   text-align: center;
@@ -100,12 +114,14 @@ body.is-loading {
     overflow: auto;
   }
 
-/* Structure */
+
+/* Navigation
+-----------------------------------------*/
 nav {
   width: 20px;
   position: fixed;
-  top: 10vh;
-  right: 4vw;
+  top: 2rem;
+  right: 1rem;
   z-index: 900;
 }
   nav ul {
@@ -132,6 +148,13 @@ nav {
           background: #F2A5A5;
         }
 
+
+/* Structure
+-----------------------------------------*/
+html, body, section {
+  height: 100%;
+}
+
 section {
   text-align: center;
   position: relative;
@@ -151,6 +174,25 @@ section {
     position: fixed;
   }
 
+.section-red {
+  color: #fff;
+  background: #DF1D1D;
+  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
+  background:    -moz-linear-gradient(#DF1D1D, #CF6969);
+  background:     -ms-linear-gradient(#DF1D1D, #CF6969);
+  background:      -o-linear-gradient(#DF1D1D, #CF6969);
+  background:         linear-gradient(#DF1D1D, #CF6969);
+}
+  .section-red a {
+    color: #fff;
+  }
+    .section-red a:hover {
+      color: #F2A5A5;
+    }
+
+
+/* More Arrow
+-----------------------------------------*/
 @-webkit-keyframes fadeOutDown {
   0% {
     opacity: 1;
@@ -172,7 +214,6 @@ section {
     transform: translate3d(0, 0, 0);
   }
 }
-
 a.more {
   display: block;
   width: 160px;
@@ -200,96 +241,62 @@ a.more {
     -webkit-animation-delay: 2s;
   }
 
-a.button {
-  display: inline-block;
-  padding: 20px 40px;
-  font-size: 25px;
-  line-height: 25px;
-  text-transform: uppercase;
-  background: #F2A5A5;
-  color: #D64C4C !important;
-  border-radius: 40px;
-  font-weight: 700;
-  border: 2px solid #F2A5A5;
-  vertical-align: middle;
-  transition: all 0.5s ease-out;
-}
-  a.button:hover {
-    background: transparent;
-    color: #F2A5A5 !important;
-  }
-  a.button i {
-    font-size: 40px;
-    position: relative;
-    top: 6px;
-    vertical-align: middle;
-  }
 
-#section-home, #section-work {
-  background: #fff;
-}
+/* ----------------------------------------- SECTIONS ----------------------------------------- */
 
-#section-about, #section-skills {
-  color: #fff;
-  background: #DF1D1D;
-  background: -webkit-linear-gradient(#DF1D1D, #CF6969);
-  background:    -moz-linear-gradient(#DF1D1D, #CF6969);
-  background:     -ms-linear-gradient(#DF1D1D, #CF6969);
-  background:      -o-linear-gradient(#DF1D1D, #CF6969);
-  background:         linear-gradient(#DF1D1D, #CF6969);
-}
-  #section-about a, #section-skills a {
-    color: #fff;
-  }
-    #section-about a:hover, #section-skills a:hover {
-      color: #F2A5A5;
-    }
-
-/* Home Section */
-#section-home .logo {
+/* Home Section
+-----------------------------------------*/
+.logo {
   margin: 0 auto 20px auto;
-  width: 12vw;
+  /*width: 12vw;*/
 }
-  #section-home .logo i.icon-bolt {
+  .logo i.icon-bolt {
     font-size: 100px;
     color: #DF1D1D;
   }
-#section-home h1 {
-  line-height: 8vw;
-  font-size: 9vw;
+h1.welcome-heading {
+  font-size: 2.6rem;
+  line-height: 2.4rem;
   color: #DF1D1D;
   background: -webkit-linear-gradient(#DF1D1D, #CF6969);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-  #section-home h1 small {
-    font-size: 5vw;
-    line-height: 6vw;
+  h1.welcome-heading small {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
     font-weight: 100;
     display: block;
     text-transform: none;
   }
 
-/* About Section */
+
+/* About Section
+-----------------------------------------*/
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 5.6rem;
+  height: 5.6rem;
   border-radius: 100%;
-  border: 6px solid #F2A5A5;
-  padding: 8px;
+  border: 0.15rem solid #F2A5A5;
+  padding: 0.1rem;
   margin: 0 auto;
 }
+  .avatar img {
+    max-width: 100%;
+    height: auto;
+  }
 
-/* Work Section */
+
+/* Work Section
+-----------------------------------------*/
 .work-links {
-  padding: 72px 0;
+  padding: 12vh 0;
 }
 a.work-link {
   display: inline-block;
   vertical-align: top;
   color: #341F1F;
   width: 30%;
-  text-align: left;
   transition: all 0.5s ease-out;
 }
   a.work-link:hover {
@@ -300,13 +307,11 @@ a.work-link {
     transform: translateY(-6px);
   }
   a.work-link i {
-    font-size: 100px;
-    float: left;
-    margin-right: 12px;
+    font-size: 3.6rem;
     vertical-align: middle;
   }
   a.work-link h4 {
-    font-size: 50px;
+    font-size: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
     margin: 0;
@@ -315,21 +320,84 @@ a.work-link {
   a.work-link h4 small {
     display: block;
     font-weight: 100;
-    font-size: 22px;
+    font-size: 0.6rem;
     text-transform: none;
   }
+  @media (max-width: 769px) {
+    .work-links {
+      padding: 6vh 0;
+    }
+    a.work-link {
+      display: block;
+      width: 280px;
+      text-align: left;
+      clear: both;
+      margin: 0.5rem auto;
+      height: 3.6rem;
+    }
+    a.work-link i {
+      float: left;
+      margin-right: 12px;
+    }
+    a.work-link h4 {
+    }
+  }
 
-/* Contact section */
+
+/* Skills section
+-----------------------------------------*/
+.meteor {
+  width: 15rem;
+  margin: 0 auto;
+}
+  .meteor img {
+    max-width: 100%;
+    height: auto;
+  }
+
+a.resume-button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.6rem;
+  line-height: 0.4rem;
+  text-transform: uppercase;
+  background: #F2A5A5;
+  color: #D64C4C !important;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  border: 2px solid #F2A5A5;
+  vertical-align: middle;
+  transition: all 0.5s ease-out;
+}
+  a.resume-button:hover {
+    background: transparent;
+    color: #F2A5A5 !important;
+  }
+  a.resume-button i {
+    font-size: 1rem;
+    position: relative;
+    top: 0.2rem;
+    vertical-align: middle;
+  }
+
+
+/* Contact section
+-----------------------------------------*/
 .contact-links {
-  padding: 72px 0;
+  padding: 12vh 0;
 }
 .contact-link {
-  font-size: 160px;
+  font-size: 5rem;
   color: #341F1F;
-  margin: 48px;
+  margin: 0 1rem;
   transition: all 0.5s ease-out;
-  display: inline-block;
+  display: block;
 }
+  @media (min-width: 768px) {
+    .contact-link {
+      display: inline-block;
+    }
+  }
   .contact-link:hover {
     color: #DF1D1D;
     background: -webkit-linear-gradient(#DF1D1D, #CF6969);

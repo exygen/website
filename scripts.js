@@ -31,7 +31,6 @@ jQuery(function($) {
 
     $("section:in-viewport(200)").do(function() {
       $(this).addClass('animate');
-      console.log('trigger animation for ' + $(this).attr("id"));
       var $navItem = $("nav a[href=#" + $(this).attr("id") + "]");
       $('nav a').removeClass('current');
       $navItem.addClass('current');
