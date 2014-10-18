@@ -20,7 +20,7 @@ html, body {
   background: #fff;
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 18px;
 }
   @media (min-width: 568px) {
     html, body {
@@ -124,6 +124,11 @@ nav {
   right: 1rem;
   z-index: 900;
 }
+  @media (max-width: 568px) {
+    nav {
+      display: none;
+    }
+  }
   nav ul {
     list-style: none;
     margin: 0;
@@ -320,21 +325,23 @@ a.work-link {
     font-size: 0.6rem;
     text-transform: none;
   }
-  @media (max-width: 769px) {
+  @media (max-width: 569px) {
     .work-links {
-      padding: 6vh 0;
+      padding: 0;
+      /*text-align: center;*/
     }
     a.work-link {
       display: block;
-      width: 280px;
-      text-align: left;
+      width: 100%;
+      /*text-align: left;*/
       clear: both;
       margin: 0.5rem auto;
-      height: 3.6rem;
+      /*height: 3.6rem;*/
     }
     a.work-link i {
-      float: left;
-      margin-right: 12px;
+      font-size: 2.2rem;
+      /*float: left;*/
+      /*margin-right: 12px;*/
     }
   }
 
