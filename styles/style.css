@@ -178,6 +178,11 @@ section {
   section.current .content {
     position: fixed;
   }
+  @media (max-width: 569px) {
+    .content {
+      padding: 10vh 4vw;
+    }
+  }
 
 .section-red {
   color: #fff;
@@ -251,6 +256,11 @@ a.more {
     font-size: 100px;
     color: #DF1D1D;
   }
+  @media (max-width: 569px) {
+    .logo i.icon-bolt {
+      font-size: 70px;
+    }
+  }
 h1.welcome-heading {
   font-size: 2.6rem;
   line-height: 2.4rem;
@@ -269,6 +279,16 @@ h1.welcome-heading {
     font-weight: 100;
     display: block;
     text-transform: none;
+  }
+  @media (max-width: 569px) {
+    h1.welcome-heading {
+      font-size: 2.0rem;
+      line-height: 2.1rem;
+    }
+    h1.welcome-heading small {
+      font-size: 1.0rem;
+      line-height: 1.0rem;
+    }
   }
 
 
@@ -325,23 +345,17 @@ a.work-link {
     font-size: 0.6rem;
     text-transform: none;
   }
-  @media (max-width: 569px) {
+  @media (max-width: 320px) {
     .work-links {
       padding: 0;
-      /*text-align: center;*/
     }
     a.work-link {
-      display: block;
-      width: 100%;
-      /*text-align: left;*/
-      clear: both;
-      margin: 0.5rem auto;
-      /*height: 3.6rem;*/
+      display: inline-block;
+      width: 40%;
+      margin: 0.5rem;
     }
     a.work-link i {
       font-size: 2.2rem;
-      /*float: left;*/
-      /*margin-right: 12px;*/
     }
   }
 
