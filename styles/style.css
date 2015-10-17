@@ -294,6 +294,10 @@ h1.welcome-heading {
 
 /* About Section
 -----------------------------------------*/
+#section-about p a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .avatar {
   width: 5.6rem;
   height: 5.6rem;
