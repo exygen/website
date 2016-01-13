@@ -366,14 +366,22 @@ a.work-link {
 
 /* Skills section
 -----------------------------------------*/
-.meteor {
-  width: 15rem;
-  margin: 0 auto;
+ul.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-  .meteor img {
-    max-width: 100%;
-    height: auto;
+  ul.skills-list li {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    padding: 0 12px;
+    margin: 12px 0;
   }
+    ul.skills-list li img {
+      vertical-align: middle;
+    }
 
 a.resume-button {
   display: inline-block;
